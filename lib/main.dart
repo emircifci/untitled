@@ -80,28 +80,7 @@ class _MainScreenState extends State<MainScreen> {
   void initState() {
     super.initState();
     
-    // Add some sample data for testing
-    _revenues.addAll([
-      Revenue(amount: 150.0, date: DateTime.now().subtract(const Duration(days: 1)), photographer: 'Ahmet', station: 'aska'),
-      Revenue(amount: 200.0, date: DateTime.now().subtract(const Duration(days: 1)), photographer: 'Mehmet', station: 'aska'),
-      Revenue(amount: 180.0, date: DateTime.now().subtract(const Duration(days: 2)), photographer: 'Ayşe', station: 'palace'),
-      Revenue(amount: 120.0, date: DateTime.now().subtract(const Duration(days: 3)), photographer: 'Hasan', station: 'imperial'),
-      Revenue(amount: 250.0, date: DateTime.now().subtract(const Duration(days: 4)), photographer: 'Fatma', station: 'aska'),
-      Revenue(amount: 300.0, date: DateTime.now().subtract(const Duration(days: 5)), photographer: 'Ahmet', station: 'palace'),
-      Revenue(amount: 175.0, date: DateTime.now().subtract(const Duration(days: 6)), photographer: 'Mehmet', station: 'imperial'),
-      
-      // Add data from previous months
-      Revenue(amount: 220.0, date: DateTime.now().subtract(const Duration(days: 35)), photographer: 'Ahmet', station: 'aska'),
-      Revenue(amount: 180.0, date: DateTime.now().subtract(const Duration(days: 35)), photographer: 'Mehmet', station: 'aska'),
-      Revenue(amount: 160.0, date: DateTime.now().subtract(const Duration(days: 36)), photographer: 'Ayşe', station: 'palace'),
-      Revenue(amount: 190.0, date: DateTime.now().subtract(const Duration(days: 37)), photographer: 'Hasan', station: 'imperial'),
-      
-      Revenue(amount: 280.0, date: DateTime.now().subtract(const Duration(days: 65)), photographer: 'Ahmet', station: 'aska'),
-      Revenue(amount: 210.0, date: DateTime.now().subtract(const Duration(days: 65)), photographer: 'Mehmet', station: 'aska'),
-      Revenue(amount: 195.0, date: DateTime.now().subtract(const Duration(days: 66)), photographer: 'Ayşe', station: 'palace'),
-      Revenue(amount: 165.0, date: DateTime.now().subtract(const Duration(days: 67)), photographer: 'Hasan', station: 'imperial'),
-    ]);
-    
+    // Initialize screens
     _screens = [
       DashboardPage(stations: _stations, revenues: _revenues),
       AddRevenuePage(
